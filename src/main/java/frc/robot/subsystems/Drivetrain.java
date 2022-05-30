@@ -4,15 +4,18 @@
 
 package frc.robot.subsystems;
 
+
+import com.ctre.phoenix.motorcontrol.can.WPI_VictorSPX;
+
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
-  private static VictorSPX m_fl = new VictorSPX(1);
-  private static VictorSPX m_fr = new VictorSPX(2);
-  private static VictorSPX m_rl = new VictorSPX(3);
-  private static VictorSPX m_rr = new VictorSPX(4);
+  private static WPI_VictorSPX m_fl = new WPI_VictorSPX(1);
+  private static WPI_VictorSPX m_fr = new WPI_VictorSPX(2);
+  private static WPI_VictorSPX m_rl = new WPI_VictorSPX(3);
+  private static WPI_VictorSPX m_rr = new WPI_VictorSPX(4);
 
   MecanumDrive drive;
 
@@ -28,5 +31,4 @@ public class Drivetrain extends SubsystemBase {
     drive.driveCartesian(y*throttle, x*throttle, z*throttle);
   }
 
-  
 }
