@@ -5,14 +5,14 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.drive.MecanumDrive;
-import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Drivetrain extends SubsystemBase {
-  private static VictorSP m_fl = new VictorSP(1);
-  private static VictorSP m_fr = new VictorSP(2);
-  private static VictorSP m_rl = new VictorSP(3);
-  private static VictorSP m_rr = new VictorSP(4);
+  private static VictorSPX m_fl = new VictorSPX(1);
+  private static VictorSPX m_fr = new VictorSPX(2);
+  private static VictorSPX m_rl = new VictorSPX(3);
+  private static VictorSPX m_rr = new VictorSPX(4);
 
   MecanumDrive drive;
 
